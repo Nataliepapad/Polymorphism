@@ -1,13 +1,24 @@
-public class Player {
-    public String name;
-    public  int health;
-    public String weapon;
+public class EnhancedPlayer {
+    private String name;
+    private  int health;
+    private String weapon;
 
-
-    public Player(String name, int health, String weapon) {
+    public EnhancedPlayer(String name, int health, String weapon) {
         this.name = name;
-        this.health = health;
+        this.health = health <= 0 ? 0 : health >= 100 ? health = 100 : health;
         this.weapon = weapon;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public String getWeapon() {
+        return weapon;
     }
 
     public void loseHealth(int damage){
