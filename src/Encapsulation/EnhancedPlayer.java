@@ -1,3 +1,5 @@
+package Encapsulation;
+
 public class EnhancedPlayer {
     private String name;
     private  int healthPercentage;

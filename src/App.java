@@ -1,3 +1,9 @@
+import Encapsulation.EnhancedPlayer;
+import Encapsulation.Player;
+import Movie.Movie;
+
+import java.util.Scanner;
+
 public class App {
     public static void app(){
         Player firstPlayer = new Player("Natalie", 100, "Bow");
@@ -22,5 +28,29 @@ public class App {
 
         secondPlayer.loseHealth(45);
         System.out.println( secondPlayer.getName() + "'s remaining health is: " + secondPlayer.healthRemaining());
+
+        System.out.println("--------------------------------------------");
+
+        Scanner s = new Scanner(System.in);
+
+        while (true){
+            System.out.printf("Enter Type of Movie.Movie:%s%n".repeat(4),
+                                       "A for Movie.Adventure",
+                                       "C for Movie.Comedy",
+                                       "T for Movie.Thriller",
+                                       "Q to Quit%n");
+            String type = s.nextLine();
+            if("Qq".contains(type)){
+                break;
+            }
+            System.out.println("Enter Movie.Movie Title:");
+            String title = s.nextLine();
+            Movie movie = Movie.getMovie(type, title);
+            movie.watchMovie();
+        }
+
+
+
+
     }
 }
