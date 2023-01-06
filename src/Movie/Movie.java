@@ -34,7 +34,6 @@ class Adventure extends Movie {
                 "Pleasant scene",
                 "Exotic locations",
                 "Historical myths");
-
     }
 
     public void watchAdventure(){

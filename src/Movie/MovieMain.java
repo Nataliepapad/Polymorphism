@@ -8,12 +8,12 @@ public class MovieMain {
         Adventure jumanji = (Adventure) Movie.getMovie("A", "Jumanji");
         jumanji.watchMovie();
 
-        System.out.printf("%n--------------------------------------------%n%n");
+        System.out.println("\n--------------------------------------------\n\n");
 
         var jaws = new Thriller("Jaws");
         jaws.watchThriller();
 
-        System.out.printf("%n--------------------------------------------%n%n");
+        System.out.println("\n--------------------------------------------\n\n");
 
         Object unknownObject = Movie.getMovie("C", "Jaws");
         if(unknownObject.getClass().getSimpleName().equals("Comedy")){
