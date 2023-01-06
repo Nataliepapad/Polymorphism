@@ -27,6 +27,5 @@ public class MealMain {
         deluxeMeal.addBurgerToppings("BBQ", "CHEDDAR", "LETTUCE", "BACON", "TOMATO");
         deluxeMeal.setDrinkSize("SMALL");
         deluxeMeal.printItemizedList();
-
     }
 }
